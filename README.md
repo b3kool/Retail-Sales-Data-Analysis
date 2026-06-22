@@ -2,7 +2,7 @@
 
 ---
 
-## **What is the objective of the project**
+## **The objective of the project**
 
 Most portfolio projects are directed towards questions like "what happened" or “why happened” or “what will happen”, for example, the trends observed in the top categories, sales by age group, seasonal fluctuations/prediction. Rather, this project is intended to take a step towards answering questions like **"why did profit margin fall four years in a row, and who/what is responsible?"**
 
