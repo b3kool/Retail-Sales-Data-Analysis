@@ -15,7 +15,7 @@ Techniques demonstrated: Joins, conditional aggregation, filtering subqueries, C
 * **Setting primary keys** where Row ID on retail\_dataset and Date on datetime\_dataset, and re-verified data types for the column. For instance, Decimal for currency fields to avoid floating-point drift in aggregation).  
 * **Verified date-time coverage** using ‘LEFT JOIN’ confirmed that there are zero orders that fall outside the date range of the calendar dimension table. This validates it as safe to join on for all time-based analysis.
 
-![Image 1](images/image1.png)
+![Image 5](images/image5.png)
 
 ---
 
@@ -23,7 +23,7 @@ Techniques demonstrated: Joins, conditional aggregation, filtering subqueries, C
 
 **Query & Output:**
 
-![Image 2](images/image2.png)
+![Image 6](images/image6.png)
 
 **Question:** Is 2016 an outlier, or part of a seasonal trend, or something else?
 
@@ -35,7 +35,7 @@ A trend observed on the margin percentage that it fell from 10.85% to 6.71% ever
 
 **Query & Output:**
 
-![Image 3](images/image3.png)
+![Image 4](images/image4.png)
 
 **Question:** If margins are falling, are average discounts increasing as well?
 
@@ -45,7 +45,7 @@ Now, this begs the question, if fewer transactions are bad, then why is the over
 
 **Follow-up Query:**
 
-![Image 4](images/image4.png)
+![Image 9](images/image9.png)
 
 The number of loss transitions have more or less stayed consistent. The average loss per bad line rose,from 113 to 152 in 4 years, and the **single worst loss has more than doubled**, from \-1360 to \-3840. The problem is concentration in the damages, not frequency.
 
@@ -55,7 +55,7 @@ The number of loss transitions have more or less stayed consistent. The average 
 
 **Query & Output:**
 
-![Image 5](images/image5.png)
+![Image 3](images/image3.png)
 
 Two separate problems were hiding, which are visible now in the category breakdown. **Technology's margin crashed to 5.34%,** in 2017, **from 12%**, in 2014\. This sector has a consistent share of 45% of the total revenue over the years.
 
@@ -65,9 +65,9 @@ Moreover, furniture had been quietly unprofitable for three straight years and d
 
 **Query:**
 
-![Image 6](images/image6.png)
+![Image 1](images/image1.png)
 
-![Image 7](images/image7.png)
+![Image 12](images/image12.png)
 
 Machines, Phones and Tables were the specific culprits, as the business was losing money and margin (percentage) on the respective items over the years.
 
@@ -77,7 +77,7 @@ Machines, Phones and Tables were the specific culprits, as the business was losi
 
 **Query:**
 
-![Image 8](images/image8.png)
+![Image 11](images/image11.png)
 
 **Question:** Is there a precise discount percentage where each category flips from profit to loss?
 
@@ -91,7 +91,7 @@ For every category, there is a precise discount ceiling, that is, **20% for Furn
 
 **Query:**
 
-![Image 9](images/image9.png)
+![Image 7](images/image7.png)
 
 **Kelly Williams** had the worst margin (2.05%) and the highest average discount (21.3%). Anna Andreadi had the best margin (14.75%) at the lowest discount rate (12.1%) 
 
@@ -99,7 +99,7 @@ Even Cassandra Brandow’s performance needs to be analysed as she has worse met
 
 **Follow-up Query: Is it the Sales Rep or the category in question**
 
-![Image 10](images/image10.png)
+![Image 8](images/image8.png)
 
 This confirms that the pattern is sales rep-specific, and not market-driven or category-driven \- Kelly's and Cassandra's Tables/Machines deals carried 33–50% discounts and the heaviest losses, while Anna sold the Tables at half the discount and a fraction of the loss.
 
@@ -109,7 +109,7 @@ This confirms that the pattern is sales rep-specific, and not market-driven or c
 
 **Query:**
 
-![Image 11](images/image11.png)
+![Image 10](images/image10.png)
 
 The discounts were scattered across roughly 60 *different*, (mostly) one-time customers. If customers were negotiating hard, the same names would recur across multiple reps, instead the pattern clusters by **rep**, ruling out customer-driven negotiation as the cause.
 
@@ -119,7 +119,7 @@ The discounts were scattered across roughly 60 *different*, (mostly) one-time cu
 
 **Query:**
 
-![Image 12](images/image12.png)
+![Image 2](images/image2.png)
 
 Here, the Tier 1 (top 20% of customers) generated **$38,792** in profit, roughly 139% of total company profit. Tier 5 (bottom 20%) was **net loss-making at \-$20,631**, with an average discount of **36.9%**, nearly five times Tier 1's 7.4%. 
 
